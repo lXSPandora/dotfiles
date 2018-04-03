@@ -1,0 +1,26 @@
+snippet rnc
+	// @flow
+	import React, { Component	} from 'react';
+	import { View, Text, StyleSheet } from 'react-native';
+
+	class $0 extends Component {
+		render() {
+			return <View />
+		}
+	}
+
+	export default $0
+
+snippet af
+	(${1:params}) => ${2:function}
+
+snippet sc
+	const ${1:ComponentName} = styled.${2:NativeComponent}`
+		${3}
+	`;
+
+snippet imp
+	import { ${1:component} } from '${2:module}' 
+
+snippet co
+	const { ${1:variables} } = ${2:object}
