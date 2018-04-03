@@ -15,10 +15,3 @@
 - Install spaceship-prompt (https://github.com/denysdovhan/spaceship-prompt)
 		`inpm install -g spaceship-prompt`
 - And install android-studio sdk
-
-
-# There are some cool snippets for vim atom and vscode
-
-[x] - VIM
-[] - Atom
-[] - Visual Studio Code
