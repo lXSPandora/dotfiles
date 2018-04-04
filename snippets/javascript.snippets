@@ -3,20 +3,20 @@ snippet rnc
 	import React, { Component	} from 'react';
 	import { View, Text, StyleSheet } from 'react-native';
 
-	class $0 extends Component {
+	export default class ${1:Component} extends Component {
 		render() {
 			return <View />
 		}
 	}
 
-	export default $0
+
 
 snippet af
 	(${1:params}) => ${2:function}
 
 snippet sc
 	const ${1:ComponentName} = styled.${2:NativeComponent}`
-		${3}
+		${3: ...pros}
 	`;
 
 snippet imp
@@ -24,3 +24,105 @@ snippet imp
 
 snippet co
 	const { ${1:variables} } = ${2:object}
+
+snippet sst
+	this.setState({
+		${1:variable}
+	});
+
+snippet props
+	this.props.
+
+snippet log
+	console.log(${1: variable});
+
+snippet state
+	this.state.
+
+snippet import
+	import { ${2:module} } from '${1:library}';
+
+snippet flex
+	flex: ${1:value};
+
+snippet align-items
+	align-items: ${1: value};
+
+snippet justify-content
+	justify-content: ${1:value};
+
+snippet margin-vertical
+	margin-vertical: ${1:value};
+
+snippet margin-horizontal
+	margin-horizontal: ${1:value}
+
+snippet margin-left
+	margin-left: ${1:value}
+
+snippet margin-right
+	margin-right: ${1:value}
+
+snippet margin-top
+	margin-top: ${1:value}
+
+snippet margin-bottom
+	margin-bottom: ${1:value}
+
+snippet margin
+	margin: ${1:value};
+
+snippet padding-vertical
+	padding-vertical: ${1:value};
+
+snippet padding-horizontal
+	padding-horizontal: ${1:value};
+
+snippet padding-top
+	padding-top: ${1:value};
+
+snippet padding-bottom
+	padding-bottom: ${1:value};
+
+snippet padding-left
+	padding-left: ${1:value};
+
+snippet padding-right
+	padding-left: ${1:value};
+
+snippet padding
+	padding: ${1:value};
+
+snippet width
+	width: ${1:value};
+
+snippet height
+	height: ${1:value};
+
+snippet border-radius
+	border-radius: ${1:value};
+
+snippet border-color
+	border-color: ${1:value};
+
+snippet border-style
+	border-style: ${1:value};
+
+snippet border-width
+	boder-width: ${1:value};
+
+snippet color
+	color: ${1:value};
+
+snippet background-color
+	background-color: ${1:value};
+
+snippet font-size
+	font-size: ${1:value};
+
+snippet font-weight
+	font-weight: ${1:value};
+
+snippet font-style
+	font-style: ${1:value};
+
