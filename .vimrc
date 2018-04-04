@@ -130,12 +130,13 @@ Plugin 'chrisbra/colorizer'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'HTML-AutoCloseTag'
 Plugin 'ternjs/tern_for_vim'
+Plugin 'arcticicestudio/nord-vim'
 
 " -------------------------------
 "       COLOR SCHEME
 " -------------------------------
-colorscheme onedark
-let g:airline_theme='onedark'
+colorscheme nord
+let g:airline_theme='nord'
 
 " --------------------------------
 "       PRETTIER CONFIG
@@ -261,3 +262,11 @@ highlight link SyntasticErrorSign SignColumn
 highlight link SyntasticWarningSign SignColumn
 highlight link SyntasticStyleErrorSign SignColumn
 highlight link SyntasticStyleWarningSign SignColumn
+
+let g:nord_italic = 1
+let g:nord_italic_comments = 1
+
+set listchars=tab:▸\           " ┐
+set listchars+=trail:·         " │ Use custom symbols to
+set listchars+=eol:↴           " │ represent invisible characters
+set listchars+=nbsp:_          " ┘
