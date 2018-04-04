@@ -126,3 +126,30 @@ snippet font-weight
 snippet font-style
 	font-style: ${1:value};
 
+snippet rsc
+	//@flow
+	import * as React from 'react'
+	import { View } from 'react-native'
+	import styled from 'styled-components/native'
+	import PropTypes from 'prop-types';
+
+	const Wrapper = styled.View`
+		flex: 1;
+		align-items: center;
+		justify-content: center;
+	`;
+
+	const InfoText = styled.Text`
+		font-size: 23;
+		color: grey;
+	`;
+
+	const ${1:ComponentName} = ({${2:Props}}) => (
+		<Wrapper>
+			<InfoText>Welcome this is a stateless component</InfoText>
+		</Wrapper>
+	);
+
+	${3:ComponentName}.propTypes = {};
+
+	export default ${4:ComponentName}
