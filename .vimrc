@@ -6,7 +6,6 @@ set shiftwidth=2               " │ http://vimcasts.org/e/2
 
 let NERDTreeShowHidden=1
 
-set number
 if has('gui_running')
 	set guifont=Fira\ Code
 endif
