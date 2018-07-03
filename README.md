@@ -2,11 +2,11 @@
 
 # Vim 
 
-- Copy the .vimrc file to the root/home folder
-- Install vundle
-		`git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
-- And run `vim +PluginInstall +qall` to install all the plugins
-
+- Install neovim using python `pip3 install neovim`
+- Copy the init.vim to ~/.config/nvim/init.vim
+- Install dein `https://github.com/Shougo/dein.vim#quick-start`
+- Run `:call dein#install()`
+- Done! your vim has been configured with sucess
 
 # ZSH
 
