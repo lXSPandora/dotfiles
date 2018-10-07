@@ -1,23 +1,6 @@
 # My Dotfiles
 
-<div style="
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-">
-	<img 
-		src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Icon-Vim.svg/50px-Icon-Vim.svg.png"
-		style="width: 50px"/>
-	<img
-		src="https://raw.githubusercontent.com/bnb/awesome-hyper/master/Hyper-Mark-Large.png"
-		style="width: 50px"
-	>
-	<img
-		src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
-		style="width: 50px"
-	>
-</div>
+<img src="https://i.imgur.com/gDbX2Py.png"/>
 
 ## Vim
 
