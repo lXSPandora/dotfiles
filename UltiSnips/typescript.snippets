@@ -1,0 +1,95 @@
+snippet rnc "React-Native: Component" b
+import React, { Component } from 'react';
+import { View } from 'react-native';
+
+export default class ${1:Name} extends Component {
+	render() {
+		return <View />
+	}
+}
+endsnippet
+
+snippet rsc "React-Native: Stateless" b
+import React from 'react';
+import { View } from 'react-native';
+
+const ${1:Name} = ({ ${2:Props} }) => (
+	<View />
+)
+
+export default ${3:Name}
+endsnippet
+
+snippet cdm "React-Native: Component Did Mount" b
+componentDidMount() {
+	$1
+}
+endsnippet
+
+snippet cdup "React-Native: Component Did Update" b
+componentDidUpdate() {
+	$1
+}
+endsnippet
+
+snippet cwm "React-Native: Component Will Mount" b
+componentWillMount() {
+	$1
+}
+endsnippet
+
+snippet cwrp "React-Native: Component Will Receive Props" b
+componentWillReceiveProps(nextProps) {
+	$1
+}
+endsnippet
+
+snippet log "JS | TS: console log" b
+console.log('${1:Identifier}', ${2:Variable});
+endsnippet
+
+snippet co "JS | TS: Destructing object" b
+const { ${1:members} } = ${2:obj};
+endsnippet
+
+snippet import "JS | TS: import" b
+import { ${1:Modules} } from '${2:Package}'
+endsnippet
+
+snippet af "JS | TS: arrow function" b
+(${1:Params}) => ${2:Body}
+endsnippet
+
+snippet gen "JS | TS: generator function" b
+function* ${1:Name}(${2:params}) {
+	${3:body}
+}
+endsnippet
+
+snippet sc "Styled Components: Component" b
+const ${1:Name} = styled.${2:Module};
+endsnippet
+
+snippet aaf "JS | TS: Async Arrow Function" b
+const ${1:Name} = async (${2:Params}) => ${3:Body}
+endsnippet
+
+snippet funcasync "JS | TS: Async Function" b
+async function ${1:Name}(${2:Params}) {
+	${3:Body}
+}
+endsnippet
+
+snippet func "JS | TS: Function" b
+function ${1:Name}(${2:Params}) {
+	${3:Body}
+}
+endsnippet
+
+snippet req "JS | TS: Require" b
+require('$1')
+endsnippet
+
+snippet reqm "JS | TS: Require Module" b
+const ${1:Name} = require('${2:Module}')
+endsnippet

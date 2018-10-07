@@ -2,7 +2,6 @@
 " No vi compatibility necessary
 set nocompatible
 filetype off
-
 set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 if &compatible
  set nocompatible
@@ -21,65 +20,73 @@ if dein#load_state('~/.cache/dein')
  endif
 
 
-" Start screen
-call dein#add('mhinz/vim-startify')
+  " Start screen
+  call dein#add('mhinz/vim-startify')
 
-" Airline
-call dein#add('vim-airline/vim-airline')
-call dein#add('vim-airline/vim-airline-themes')
+  " Airline
+  call dein#add('vim-airline/vim-airline')
+  call dein#add('vim-airline/vim-airline-themes')
 
-" Git
-call dein#add('airblade/vim-gitgutter')
-call dein#add('tpope/vim-fugitive')
+  " Git
+  call dein#add('airblade/vim-gitgutter')
+  call dein#add('tpope/vim-fugitive')
 
-" Editing utilities
-call dein#add('mkitt/tabline.vim')
-call dein#add('ctrlpvim/ctrlp.vim')
-call dein#add('ntpeters/vim-better-whitespace')
-call dein#add('scrooloose/nerdcommenter')
-call dein#add('gavocanov/vim-js-indent')
-call dein#add('Yggdroot/indentLine')
-call dein#add('jiangmiao/auto-pairs')
-call dein#add('vim-syntastic/syntastic')
+  " Editing utilities
+  call dein#add('mkitt/tabline.vim')
+  call dein#add('ctrlpvim/ctrlp.vim')
+  call dein#add('ntpeters/vim-better-whitespace')
+  call dein#add('scrooloose/nerdcommenter')
+  call dein#add('gavocanov/vim-js-indent')
+  call dein#add('Yggdroot/indentLine')
+  call dein#add('jiangmiao/auto-pairs')
+  call dein#add('vim-syntastic/syntastic')
 
-" Statistics
-call dein#add('wakatime/vim-wakatime')
+  " Statistics
+  call dein#add('wakatime/vim-wakatime')
 
-" NerdTree
-call dein#add('jistr/vim-nerdtree-tabs')
-call dein#add('scrooloose/nerdtree')
-call dein#add('tiagofumo/vim-nerdtree-syntax-highlight')
-call dein#add('Xuyuanp/nerdtree-git-plugin')
+  " NerdTree
+  call dein#add('jistr/vim-nerdtree-tabs')
+  call dein#add('scrooloose/nerdtree')
+  call dein#add('tiagofumo/vim-nerdtree-syntax-highlight')
+  call dein#add('Xuyuanp/nerdtree-git-plugin')
 
-" (Programming) languages support
-call dein#add('pangloss/vim-javascript')
-call dein#add('mxw/vim-jsx')
-call dein#add('leafgarland/typescript-vim')
-call dein#add('isRuslan/vim-es6')
-call dein#add('slashmili/alchemist.vim')
+    " (Programming) languages support
+  call dein#add('pangloss/vim-javascript')
+  call dein#add('mxw/vim-jsx')
+  call dein#add('leafgarland/typescript-vim')
+  call dein#add('isRuslan/vim-es6')
+  call dein#add('slashmili/alchemist.vim')
 
-" Colorschemes
-call dein#add('flazz/vim-colorschemes')
-call dein#add('whatyouhide/vim-gotham')
-call dein#add('altercation/vim-colors-solarized')
-call dein#add('joshdick/onedark.vim')
-call dein#add('rakr/vim-one')
-call dein#add('drewtempelmeyer/palenight.vim')
-call dein#add('ashfinal/vim-colors-violet')
-call dein#add('NLKNguyen/papercolor-theme')
-call dein#add('Yggdroot/duoduo')
-call dein#add('liuchengxu/space-vim-dark')
+  " Colorschemes
+  call dein#add('flazz/vim-colorschemes')
+  call dein#add('whatyouhide/vim-gotham')
+  call dein#add('altercation/vim-colors-solarized')
+  call dein#add('joshdick/onedark.vim')
+  call dein#add('rakr/vim-one')
+  call dein#add('drewtempelmeyer/palenight.vim')
+  call dein#add('ashfinal/vim-colors-violet')
+  call dein#add('NLKNguyen/papercolor-theme')
+  call dein#add('Yggdroot/duoduo')
+  call dein#add('liuchengxu/space-vim-dark')
 
-call dein#add('ryanoasis/vim-devicons')
+  call dein#add('ryanoasis/vim-devicons')
 
-call dein#add('let-def/vimbufsync')
+  call dein#add('let-def/vimbufsync')
 
-" Cool Hacks <3
-call dein#add('carlitux/deoplete-ternjs')
-call dein#add('alexlafroscia/deoplete-flow')
-call dein#add('w0rp/ale')
+  " Cool Hacks <3
+  call dein#add('carlitux/deoplete-ternjs')
+  call dein#add('alexlafroscia/deoplete-flow')
+  call dein#add('w0rp/ale')
+  call dein#add('mhartington/nvim-typescript', {'build': './install.sh'})
+  call dein#add('Shougo/denite.nvim')
 
- call dein#end()
+  " Snippets
+  call dein#add('SirVer/ultisnips')
+  call dein#add('honza/vim-snippets')
+
+
+  " End of the installation script
+  call dein#end()
  call dein#save_state()
 endif
 
@@ -170,7 +177,7 @@ function! s:reveal()
   endif
 endfunction
 
-au VimEnter * NERDTree
+" au VimEnter * NERDTree
 au BufEnter * call s:reveal()
 
 " Focus on editor instead of NerdTree
@@ -201,11 +208,13 @@ autocmd FileType typescript nmap <buffer> <Leader>t :<C-u>echo tsuquyomi#hint()<
 
 " -- KEYBOARD SHORTCUTS --
 
-" Tabs
 nnoremap <C-Left> :tabp<CR>
 nnoremap <C-Right> :tabn<CR>
-nnoremap <C-N> :tabnew<CR>
-nnoremap <C-Q> :q<CR>
+nnoremap <C-T> :tabnew<CR>
+nnoremap <C-W> :q<CR>
+nnoremap <C-Q> :q!<CR>
+nnoremap <C-S> :w<CR>
+nnoremap <C-B> :NERDTreeToggle<CR>
 
 " Save with <C-S> and update git gutter
 command -nargs=0 -bar Update if &modified
@@ -299,4 +308,14 @@ let g:syntastic_javascript_eslint_exe = 'npm run lint --'
 
 " TypeScript
 let g:tsuquyomi_completion_detail = 1
+
+" UntiSnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+let g:UltiSnipsSnippetDirectories = ['/Users/'.$USER.'/.vim/UltiSnips']
 
