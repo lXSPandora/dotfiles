@@ -56,6 +56,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('leafgarland/typescript-vim')
   call dein#add('isRuslan/vim-es6')
   call dein#add('slashmili/alchemist.vim')
+  call dein#add('paulrosania/vim-graphql')
 
   " Colorschemes
   call dein#add('flazz/vim-colorschemes')
@@ -236,6 +237,7 @@ let g:startify_fortune_use_unicode = 1
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 
 " NerdTree
+let NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
 let g:nerdtree_tabs_open_on_console_startup = 1
 let g:NERDTreeIgnore = ['node_modules', 'public', 'coverage']
@@ -243,6 +245,7 @@ let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
 hi NERDTreeOpenable guifg=#27CBC0
 hi NERDTreeClosable guifg=#DA3C78
+
 
 " Syntastic
 let g:syntastic_ocaml_checkers = ['merlin']
@@ -319,3 +322,43 @@ let g:UltiSnipsEditSplit="vertical"
 
 let g:UltiSnipsSnippetDirectories = ['/Users/'.$USER.'/.vim/UltiSnips']
 
+" Deoplete
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#sources#ternjs#types = 1
+let g:deoplete#sources#ternjs#depths = 1
+let g:deoplete#sources#ternjs#include_keywords = 1
+"Add extra filetypes
+let g:deoplete#sources#ternjs#filetypes = [
+                \ 'jsx',
+                \ 'javascript.jsx',
+                \ 'vue',
+                \ '...'
+                \ ]
+
+" ALE Linter
+let g:ale_linters = {
+\   'javascript': ['eslint', 'flow'],
+\}
+
+let g:ale_completion_enabled = 1
+let g:ale_sign_column_always = 1
+
+let g:ale_sign_error = '❌'
+let g:ale_sign_warning = '⚠️'
+
+let g:airline#extensions#ale#enabled = 1
+
+function! LinterStatus() abort
+    let l:counts = ale#statusline#Count(bufnr(''))
+
+    let l:all_errors = l:counts.error + l:counts.style_error
+    let l:all_non_errors = l:counts.total - l:all_errors
+
+    return l:counts.total == 0 ? 'OK' : printf(
+    \   '%dW %dE',
+    \   all_non_errors,
+    \   all_errors
+    \)
+endfunction
+
+set statusline=%{LinterStatus()}
