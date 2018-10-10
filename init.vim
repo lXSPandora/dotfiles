@@ -50,13 +50,16 @@ if dein#load_state('~/.cache/dein')
   call dein#add('tiagofumo/vim-nerdtree-syntax-highlight')
   call dein#add('Xuyuanp/nerdtree-git-plugin')
 
-    " (Programming) languages support
+  " (Programming) languages support
   call dein#add('pangloss/vim-javascript')
   call dein#add('mxw/vim-jsx')
   call dein#add('leafgarland/typescript-vim')
   call dein#add('isRuslan/vim-es6')
   call dein#add('slashmili/alchemist.vim')
   call dein#add('paulrosania/vim-graphql')
+
+  " Utilities
+  call dein#add('tomtom/tcomment_vim')
 
   " Colorschemes
   call dein#add('flazz/vim-colorschemes')
@@ -216,6 +219,7 @@ nnoremap <C-W> :q<CR>
 nnoremap <C-Q> :q!<CR>
 nnoremap <C-S> :w<CR>
 nnoremap <C-B> :NERDTreeToggle<CR>
+nnoremap <C-K> :TComment<CR>
 
 " Save with <C-S> and update git gutter
 command -nargs=0 -bar Update if &modified
